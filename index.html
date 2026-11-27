@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hidrate-se • Controle de Água</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="phone-frame" aria-label="Aplicativo de monitoramento de água">
+    <!-- ==================== TELA 1: INÍCIO ==================== -->
+    <section id="screen-home" class="screen active" aria-label="Tela inicial">
+      <svg class="top-wave" viewBox="0 0 390 150" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,0 L390,0 L390,15 C280,15 245,75 160,82 C85,88 35,105 0,145 Z" fill="#DDF0FB" />
+      </svg>
+
+      <div class="home-content">
+        <div class="mascot-wrapper" id="mascot-btn" title="Clique para dar um oi!">
+          <svg class="mascot-svg" viewBox="0 0 220 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Raios laterais desenhados à mão -->
+            <path class="ray ray-1" d="M48 75 L34 66" stroke="#459EEB" stroke-width="4.5" stroke-linecap="round" />
+            <path class="ray ray-2" d="M40 105 L22 105" stroke="#459EEB" stroke-width="4.5" stroke-linecap="round" />
+            <path class="ray ray-3" d="M49 135 L35 144" stroke="#459EEB" stroke-width="4.5" stroke-linecap="round" />
+
+            <path class="ray ray-1" d="M172 75 L186 66" stroke="#459EEB" stroke-width="4.5" stroke-linecap="round" />
+            <path class="ray ray-2" d="M180 105 L198 105" stroke="#459EEB" stroke-width="4.5" stroke-linecap="round" />
+            <path class="ray ray-3" d="M171 135 L185 144" stroke="#459EEB" stroke-width="4.5" stroke-linecap="round" />
+
+            <!-- Corpo da gota -->
+            <path
+              d="M110 24 C110 24 62 84 62 122 C62 151 83 171 110 171 C137 171 158 151 158 122 C158 84 110 24 110 24 Z"
+              fill="#62B6F6"
+            />
+            <!-- Sombra interna direita -->
+            <path
+              d="M110 28 C124 51 146 92 146 122 C146 146 131 163 110 166 C133 166 154 148 154 122 C154 86 110 28 110 28 Z"
+              fill="#459EEB"
+            />
+            <!-- Brilho interno esquerdo -->
+            <path
+              d="M84 95 C77 109 76 124 81 137"
+              stroke="#BCE3FD"
+              stroke-width="5"
+              stroke-linecap="round"
+            />
+            <circle cx="91" cy="78" r="3" fill="#BCE3FD" />
+
+            <!-- Contorno estilo ilustração -->
+            <path
+              d="M110 24 C110 24 62 84 62 122 C62 151 83 171 110 171 C137 171 158 151 158 122 C158 84 110 24 110 24 Z"
+              stroke="#1A2B3C"
+              stroke-width="4.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+            <!-- Bochechas -->
+            <ellipse cx="83" cy="127" rx="6" ry="3.5" fill="#92D0FC" />
+            <ellipse cx="137" cy="127" rx="6" ry="3.5" fill="#92D0FC" />
+
+            <!-- Olhos -->
+            <circle cx="90" cy="116" r="5" fill="#1A2B3C" />
+            <circle cx="88.5" cy="114.5" r="1.5" fill="#FFFFFF" />
+            <circle cx="130" cy="116" r="5" fill="#1A2B3C" />
+            <circle cx="128.5" cy="114.5" r="1.5" fill="#FFFFFF" />
+
+            <!-- Sorriso -->
+            <path
+              d="M101 122 C104 130 116 130 119 122"
+              stroke="#1A2B3C"
+              stroke-width="3.8"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+
+        <h1 class="home-title">
+          Olá!
+          <svg class="heart-icon" viewBox="0 0 36 34" fill="none" aria-hidden="true">
+            <path
+              d="M18 31 C18 31 3 21.5 3 11.2 C3 6.2 6.8 2.8 11.3 2.8 C14.2 2.8 16.7 4.3 18 6.6 C19.3 4.3 21.8 2.8 24.7 2.8 C29.2 2.8 33 6.2 33 11.2 C33 21.5 18 31 18 31 Z"
+              fill="#459EEB"
+            />
+          </svg>
+        </h1>
+
+        <p class="home-subtitle">Vamos beber água<br />hoje?</p>
+
+        <button type="button" class="btn-primary btn-start" id="btn-go-register">
+          <span>COMEÇAR</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="home-footer">
+        <svg class="bottom-wave" viewBox="0 0 390 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,25 C95,8 155,34 245,22 C310,13 355,18 390,26 L390,100 L0,100 Z" fill="#DDF0FB" />
+        </svg>
+        <div class="footer-sprout">
+          <span class="footer-line"></span>
+          <svg class="sprout-svg" viewBox="0 0 44 38" fill="none" aria-hidden="true">
+            <path d="M22 34 C22 25 22 19 22 15" stroke="#539E58" stroke-width="3" stroke-linecap="round" />
+            <path d="M22 25 C12 25 7 18 8 10 C16 10 22 15 22 25 Z" fill="#70BD75" stroke="#539E58" stroke-width="2" stroke-linejoin="round" />
+            <path d="M22 21 C32 21 37 13 36 5 C28 5 22 11 22 21 Z" fill="#82CC87" stroke="#539E58" stroke-width="2" stroke-linejoin="round" />
+          </svg>
+          <span class="footer-line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TELA 2: REGISTRAR ==================== -->
+    <section id="screen-register" class="screen" aria-label="Registrar copos de água">
+      <header class="screen-header">
+        <button type="button" class="btn-back" data-target="screen-home" aria-label="Voltar para o início">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+            <path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="#1A2B3C" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </header>
+
+      <div class="register-content">
+        <h2 class="section-title">Copos de água<br />hoje</h2>
+
+        <div class="counter-pill" id="counter-display" aria-live="polite">0/8</div>
+
+        <div class="cups-grid" id="cups-grid" role="group" aria-label="Grade de 8 copos de água">
+          <!-- Gerado dinamicamente via script.js -->
+        </div>
+
+        <button type="button" class="btn-primary btn-add-cup" id="btn-add-cup">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 5V19M5 12H19" stroke="white" stroke-width="3.2" stroke-linecap="round" />
+          </svg>
+          <span>ADICIONAR COPO</span>
+        </button>
+      </div>
+
+      <nav class="bottom-nav" aria-label="Navegação principal">
+        <button type="button" class="nav-item" data-target="screen-home">
+          <svg class="nav-icon" viewBox="0 0 28 28" fill="none">
+            <path d="M4 13L14 4L24 13" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M7 11.5V23H12V17H16V23H21V11.5" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span>Início</span>
+        </button>
+
+        <button type="button" class="nav-item active" data-target="screen-register">
+          <svg class="nav-icon" viewBox="0 0 28 28" fill="none">
+            <path d="M14 4C14 4 7 12.2 7 17.5C7 21.4 10.1 24.5 14 24.5C17.9 24.5 21 21.4 21 17.5C21 12.2 14 4 14 4Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+          </svg>
+          <span>Registrar</span>
+          <span class="nav-underline"></span>
+        </button>
+
+        <button type="button" class="nav-item" data-target="screen-progress">
+          <svg class="nav-icon" viewBox="0 0 28 28" fill="none">
+            <rect x="6" y="16" width="3.5" height="7" rx="1.5" fill="currentColor" />
+            <rect x="12.25" y="11" width="3.5" height="12" rx="1.5" fill="currentColor" />
+            <rect x="18.5" y="6" width="3.5" height="17" rx="1.5" fill="currentColor" />
+          </svg>
+          <span>Progresso</span>
+        </button>
+      </nav>
+    </section>
+
+    <!-- ==================== TELA 3: PROGRESSO ==================== -->
+    <section id="screen-progress" class="screen" aria-label="Seu progresso">
+      <svg class="top-wave top-wave-small" viewBox="0 0 390 150" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,0 L215,0 C175,65 85,82 0,145 Z" fill="#DDF0FB" />
+      </svg>
+
+      <header class="screen-header">
+        <button type="button" class="btn-back" data-target="screen-register" aria-label="Voltar para registrar">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+            <path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="#1A2B3C" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </header>
+
+      <div class="progress-content">
+        <h2 class="section-title">Seu progresso</h2>
+
+        <div class="ring-container">
+          <svg class="progress-ring" viewBox="0 0 220 220">
+            <circle class="ring-track" cx="110" cy="110" r="86" />
+            <circle class="ring-fill" id="progress-ring-fill" cx="110" cy="110" r="86" />
+          </svg>
+          <div class="ring-label" id="progress-percent">0%</div>
+        </div>
+
+        <p class="goal-text">Meta &nbsp;8 copos por dia</p>
+
+        <div class="motivation-banner" id="motivation-banner">
+          <svg class="sprout-svg-banner" viewBox="0 0 44 38" fill="none" aria-hidden="true">
+            <path d="M22 34 C22 25 22 19 22 15" stroke="#539E58" stroke-width="3" stroke-linecap="round" />
+            <path d="M22 25 C12 25 7 18 8 10 C16 10 22 15 22 25 Z" fill="#70BD75" stroke="#539E58" stroke-width="2" stroke-linejoin="round" />
+            <path d="M22 21 C32 21 37 13 36 5 C28 5 22 11 22 21 Z" fill="#82CC87" stroke="#539E58" stroke-width="2" stroke-linejoin="round" />
+          </svg>
+          <span id="motivation-text">Continue assim!</span>
+          <svg class="heart-icon-small" viewBox="0 0 36 34" fill="none" aria-hidden="true">
+            <path
+              d="M18 31 C18 31 3 21.5 3 11.2 C3 6.2 6.8 2.8 11.3 2.8 C14.2 2.8 16.7 4.3 18 6.6 C19.3 4.3 21.8 2.8 24.7 2.8 C29.2 2.8 33 6.2 33 11.2 C33 21.5 18 31 18 31 Z"
+              fill="#459EEB"
+            />
+          </svg>
+        </div>
+
+        <button type="button" class="btn-reset" id="btn-reset">Zerar contagem de hoje</button>
+      </div>
+
+      <svg class="progress-bottom-wave" viewBox="0 0 390 70" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,22 C110,4 185,38 280,26 C335,19 368,12 390,8 L390,70 L0,70 Z" fill="#DDF0FB" />
+      </svg>
+
+      <nav class="bottom-nav" aria-label="Navegação principal">
+        <button type="button" class="nav-item" data-target="screen-home">
+          <svg class="nav-icon" viewBox="0 0 28 28" fill="none">
+            <path d="M4 13L14 4L24 13" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M7 11.5V23H12V17H16V23H21V11.5" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span>Início</span>
+        </button>
+
+        <button type="button" class="nav-item" data-target="screen-register">
+          <svg class="nav-icon" viewBox="0 0 28 28" fill="none">
+            <path d="M14 4C14 4 7 12.2 7 17.5C7 21.4 10.1 24.5 14 24.5C17.9 24.5 21 21.4 21 17.5C21 12.2 14 4 14 4Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+          </svg>
+          <span>Registrar</span>
+        </button>
+
+        <button type="button" class="nav-item active" data-target="screen-progress">
+          <svg class="nav-icon" viewBox="0 0 28 28" fill="none">
+            <rect x="6" y="16" width="3.5" height="7" rx="1.5" fill="currentColor" />
+            <rect x="12.25" y="11" width="3.5" height="12" rx="1.5" fill="currentColor" />
+            <rect x="18.5" y="6" width="3.5" height="17" rx="1.5" fill="currentColor" />
+          </svg>
+          <span>Progresso</span>
+          <span class="nav-underline"></span>
+        </button>
+      </nav>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
